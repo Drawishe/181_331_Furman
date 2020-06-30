@@ -176,7 +176,6 @@ ApplicationWindow {
                     anchors.fill:parent
 
                     Button{
-
                         Layout.column: 0
                         onClicked: swipeView.currentIndex = 0
                         font.pixelSize: 40
@@ -195,19 +194,23 @@ ApplicationWindow {
                 }
             }
             GridLayout{
-                columns: 7
-                rows: 6
+                anchors.fill: parent
+                columns: 4
+                rows: 5
                 Image {
-                    Layout.column: 1
-                    Layout.columnSpan: 5
+                    Layout.column: 0
+                    Layout.columnSpan: 4
                     Layout.row: 0
                     Layout.fillWidth: true
                     Layout.fillHeight: true
+                    fillMode: Image.PreserveAspectFit
 
                     id:  cover
 
                 }
                 MediaPlayer{
+                    Layout.row: 1
+                    Layout.column: 1
                     id: player
                     onPositionChanged: {
                         timeline.sync = true
@@ -218,28 +221,50 @@ ApplicationWindow {
 
 
                 }
-                TextField{
-                    readOnly: true
-                    Layout.row: 3
-                    Layout.column: 6
-                    text: player.position / 60000
-                    maximumLength: 4
-                }
+//                RadioButton{
+//                    id:rc1
+//                    checked: {if(rc2.checked){true}}
+
+//                }
+//                RadioButton{
+//                    id:rc2
+//                    checked: {if(rc3.checked){true}}
+//                }
+//                RadioButton{
+//                    id: rc3
+//                    checked: {if(rc4.checked){true}}
+//                }
+//                RadioButton{
+//                    id: rc4
+//                    checked: {if(rc5.checked){true}}
+//                }
+//                RadioButton{
+//                    id: rc5
+
+//                }
+
 
                 TextField{
                     readOnly: true
                     Layout.row: 3
                     Layout.column: 0
+                    Layout.columnSpan: 1
                     text: player.duration / 60000
                     maximumLength: 4
 
                 }
-
-
+                TextField{
+                    readOnly: true
+                    Layout.row: 3
+                    Layout.column: 3
+                    Layout.columnSpan: 1
+                    text: player.position / 60000
+                    maximumLength: 4
+                }
                 Slider{
                     Layout.row: 4
                     Layout.column: 0
-                    Layout.columnSpan: 6
+                    Layout.columnSpan: 4
                     Layout.fillWidth: true
                     id: timeline
                     to: player.duration
@@ -247,12 +272,18 @@ ApplicationWindow {
                     onValueChanged: {if(!sync){player.seek(value)}}
                     Material.accent: "#727cf5"
                 }
+
                 //Кнопка Перемешивания
                 Button{
                     Layout.row: 5
                     Layout.column: 0
+                    flat: true
 
                 }
+//                Item{
+//                Layout.column: 1
+//                Layout.row: 5
+//                }
                 //Кнопка Назад
                 Button{
                     Layout.row: 5
@@ -265,7 +296,6 @@ ApplicationWindow {
                 Button{
                     Layout.row: 5
                     Layout.column: 2
-                    Layout.columnSpan: 2
                     flat: true
                     text: player.playbackState === MediaPlayer.PlayingState ? "||" : "►"
                     onClicked: player.playbackState === MediaPlayer.PlayingState ?
@@ -276,7 +306,7 @@ ApplicationWindow {
                 //Кнопка Вперед
                 Button{
                     Layout.row: 5
-                    Layout.column: 5
+                    Layout.column: 3
                     text: "►|"
                     flat: true
 
@@ -284,7 +314,8 @@ ApplicationWindow {
                 //Кнопка Повтора
                 Button{
                     Layout.row: 5
-                    Layout.column: 6
+                    Layout.column: 4
+                    flat: true
 
                 }
 
