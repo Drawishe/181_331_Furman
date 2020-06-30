@@ -10,11 +10,11 @@ mospolytech.ru
 
 # Снимки
 
-https://funkyimg.com/i/361N8.png
+<img src="https://funkyimg.com/i/361N8.png">
 
-https://funkyimg.com/i/361Na.png
+<img src="https://funkyimg.com/i/361Na.png">
 
-https://funkyimg.com/i/361N9.png
+<img src="https://funkyimg.com/i/361N9.png">
 
 # О создании приложения
 
