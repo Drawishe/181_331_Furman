@@ -48,16 +48,16 @@ Page{
             Layout.fillHeight: true
 
             id:  cover
-            source: "file"
+            source: "./img/cover.jpg"
 
         }
         MediaPlayer{
-            id: mdplayer
-            source: ""
-            volume: vol.value
+            id: player
+            source: "./audio.mp3"
+            //volume: vol.value
             onPositionChanged: {
                 timeline.sync = true
-                timeline.value = mdplayer.position
+                timeline.value = player.position
                 timeline.sync = false
             }
 
@@ -67,40 +67,53 @@ Page{
 
 
         Slider{
-            id: timeline
-            to: mdplayer.duration
-            property bool sync: false
-            onValueChanged: {if(!sync){mdplayer.seek(value)}}
+            Layout.row: 4
+            Layout.column: 0
+            Layout.columnSpan: 5
             Layout.fillWidth: true
-            Material.accent: Material.Teal
+            id: timeline
+            to: player.duration
+            property bool sync: false
+            onValueChanged: {if(!sync){player.seek(value)}}
+            Material.accent: "#727cf5"
         }
         //Кнопка Перемешивания
         Button{
+            Layout.row: 5
+            Layout.column: 0
 
         }
         //Кнопка Назад
         Button{
+            Layout.row: 5
+            Layout.column: 1
             text: "|◄ "
             flat: true
 
         }
         //Кнопка Play|Pause
         Button{
+            Layout.row: 5
+            Layout.column: 2
             flat: true
-            text: mdplayer.playbackState === MediaPlayer.PlayingState ? "||" : "►"
-            onClicked: mdplayer.playbackState === MediaPlayer.PlayingState ?
-                           mdplayer.pause() : mdplayer.play()
+            text: player.playbackState === MediaPlayer.PlayingState ? "||" : "►"
+            onClicked: player.playbackState === MediaPlayer.PlayingState ?
+                           player.pause() : player.play()
 
 
         }
         //Кнопка Вперед
         Button{
+            Layout.row: 5
+            Layout.column: 3
             text: "►|"
             flat: true
 
         }
         //Кнопка Повтора
         Button{
+            Layout.row: 5
+            Layout.column: 4
 
         }
 

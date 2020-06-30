@@ -5,5 +5,7 @@
         <file>Page1.qml</file>
         <file>Page2.qml</file>
         <file>img/polytech.jpg</file>
+        <file>audio.mp3</file>
+        <file>img/cover.jpg</file>
     </qresource>
 </RCC>
