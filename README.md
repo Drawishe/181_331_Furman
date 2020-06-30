@@ -10,9 +10,7 @@ mospolytech.ru
 
 # Снимки
 
-<img src="https://funkyimg.com/i/361N8.png" width:30%>
-<img src="https://funkyimg.com/i/361Na.png" width:30%>
-<img src="https://funkyimg.com/i/361N9.png" width:30%>
+<img src="https://funkyimg.com/i/361N8.png" width=300>  <img src="https://funkyimg.com/i/361Na.png" width=300>  <img src="https://funkyimg.com/i/361N9.png" width=300>
 
 # О создании приложения
 
