@@ -38,7 +38,7 @@ Page{
             }
     }
     GridLayout{
-        columns: 6
+        columns: 5
         rows: 6
         Image {
             Layout.column: 1
@@ -48,12 +48,12 @@ Page{
             Layout.fillHeight: true
 
             id:  cover
-            source: "./img/cover.jpg"
+            source: "./covers/Parallel Synthesis.jpg"
 
         }
         MediaPlayer{
             id: player
-            source: "./audio.mp3"
+            source: "./music/Parallel Synthesis FSM.mp3"
             //volume: vol.value
             onPositionChanged: {
                 timeline.sync = true
@@ -69,7 +69,7 @@ Page{
         Slider{
             Layout.row: 4
             Layout.column: 0
-            Layout.columnSpan: 5
+            Layout.columnSpan: 4
             Layout.fillWidth: true
             id: timeline
             to: player.duration
