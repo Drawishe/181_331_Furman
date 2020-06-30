@@ -5,17 +5,10 @@
         <file>Page1.qml</file>
         <file>Page2.qml</file>
         <file>img/polytech.jpg</file>
-        <file>img/cover.jpg</file>
-        <file>covers/Back 2 U.jpg</file>
-        <file>covers/Parallel Synthesis.jpg</file>
-        <file>covers/Relax.jpg</file>
-        <file>covers/Stars.jpg</file>
         <file>covers/unknown.jpg</file>
-        <file>music/Calm Hours _Vlad Gluschenko.mp3</file>
-        <file>music/Obsidian _Glitch.mp3</file>
-        <file>music/Parallel Synthesis _FSM.mp3</file>
-        <file>music/Reason to fly _Maittre.mp3</file>
-        <file>music/Relax _Roa.mp3</file>
-        <file>music/Stars _Vlad Gluschenko.mp3</file>
+        <file>music/Parallel-FSM.mp3</file>
+        <file>covers/Parallel-FSM.jpg</file>
+        <file>covers/Relax-Roa.jpg</file>
+        <file>covers/Stars-Vlad.jpg</file>
     </qresource>
 </RCC>
